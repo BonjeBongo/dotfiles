@@ -5,50 +5,48 @@
   modulesPath,
   ...
 }: {
-  config = {
-    imports = [
-      (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
-    boot = {
-      initrd = {
-        avaliableKernelModules = [
-          "nvme"
-          "xhci_pci"
-          "ahci"
-          "usb_storage"
-          "sd_mod"
-          "rtsx_pci_sdmmc"
-        ];
-        kernelModules = [ ];
+  boot = {
+    initrd = {
+      avaliableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "ahci"
+        "usb_storage"
+        "sd_mod"
+        "rtsx_pci_sdmmc"
+      ];
+      kernelModules = [ ];
 
-      };
-      kernelModules = [ "kvm-amd" ];
-      extraModulePackages = [ ];
     };
+    kernelModules = [ "kvm-amd" ];
+    extraModulePackages = [ ];
+  };
 
-    fileSystems = {
-      "/" = {
-        device = "/dev/disk/by-label/nixos";
-        fsType = "btrfs";
-      };
-      "/boot" = {
-        device = "/dev/disk/by-label/boot";
-        fsType = "vfat";
-        options = [ 
-          "fmask=077"
-          "dmask=077"
-        ];
-      };
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-label/nixos";
+      fsType = "btrfs";
     };
-    swapDevices = [ {
-      device = "/dev/disk/by-label/swap";
-      size = 20*1024;
-    } ];
+    "/boot" = {
+      device = "/dev/disk/by-label/boot";
+      fsType = "vfat";
+      options = [ 
+        "fmask=077"
+        "dmask=077"
+      ];
+    };
+  };
+  swapDevices = [ {
+    device = "/dev/disk/by-label/swap";
+    size = 20*1024;
+  } ];
 
-    networking.useDHCP = lib.mkDefault true;
+  networking.useDHCP = lib.mkDefault true;
 
-    nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-    hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  }
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
