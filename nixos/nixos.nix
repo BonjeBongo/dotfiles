@@ -1,7 +1,7 @@
 {
   inputs,
   lib,
-  flatpaks,
+  nix-flatpak,
   ...
 }: let
   username = "bonje";
@@ -43,7 +43,7 @@ in {
       home.homeDirectory = "/home/${username}";
       home-manager.extraSpecialArgs.flake-inputs = inputs;
       imports = [
-        flatpaks.homeManagerModules.nix-flatpak
+        nix-flatpak.homeManagerModules.nix-flatpak
         ../home-manager/ags.nix
         ../home-manager/blackbox.nix
         ../home-manager/browser.nix
