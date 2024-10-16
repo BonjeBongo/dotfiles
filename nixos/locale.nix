@@ -6,7 +6,7 @@
   console.useXkbConfig = true;
   services.xserver = {
     xkb.layout = "us,ua,jp";
-    xkbOptions = "grp:ctrl_space_toggle"
+    xkbOptions = "grp:ctrl_space_toggle";
   };
 
   i18n.inputMethod = {
