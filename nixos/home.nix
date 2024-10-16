@@ -30,11 +30,8 @@
     "file://${home}/Videos"
     "file://${home}/Downloads"
     "file://${home}/Desktop"
-    "file://${home}/Work"
-    "file://${home}/Projects"
-    "file://${home}/Vault"
-    "file://${home}/School"
-    "file://${home}/.config Config"
+    "file://${home}/Files"
+    "file://${home}/.dotfiles Dotfiles"
   ];
 
   services = {

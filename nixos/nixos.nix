@@ -40,7 +40,9 @@ in {
     users.${username} = {
       home.username = username;
       home.homeDirectory = "/home/${username}";
+      home-manager.extraSpecialArgs.flake-inputs = inputs;
       imports = [
+        flatpaks.homeManagerModules.nix-flatpak
         ../home-manager/ags.nix
         ../home-manager/blackbox.nix
         ../home-manager/browser.nix

@@ -4,8 +4,6 @@
   outputs = inputs @ {
     self,
     home-manager,
-    flatpak,
-    nix-flatpak,
     nixpkgs,
     ...
   }: {
@@ -23,11 +21,9 @@
         modules = [
           ./nixos/machines/laptop.nix
           ./nixos/nixos.nix
-          flake-inputs.flatpaks.homeManagerModules.nix-flatpak
           home-manager.nixosModules.home-manager
           {
             networking.hostName = "PizzaBox";
-            home-manager.extraSpecialArgs.flake-inputs = inputs;
           }
         ];
       };
@@ -40,11 +36,9 @@
         modules = [
           ./nixos/machines/desktop.nix
           ./nixos/nixos.nix
-          flake-inputs.flatpaks.homeManagerModules.nix-flatpak
           home-manager.nixosModules.home-manager
           {
             networking.hostName = "PizzaOven";
-            home-manager.extraSpecialArgs.flake-inputs = inputs;
           }
         ];
       };
