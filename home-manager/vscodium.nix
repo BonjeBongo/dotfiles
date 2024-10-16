@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{inputs, pkgs ...}: {
   programs.vscodium = {
     enable = true;
     package = pkgs.vscodium.fhs;
