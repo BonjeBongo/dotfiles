@@ -39,7 +39,7 @@
           "fmask=077"
           "dmask=077"
         ];
-      }
+      };
     };
     swapDevices = [ {
       device = "/dev/disk/by-label/swap";
