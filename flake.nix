@@ -12,7 +12,7 @@
 
     # nixos config
     nixosConfigurations = {
-      "nixos-laptop" = nixpkgs.lib.nixosSystem {
+      "PizzaBox" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs;
@@ -31,7 +31,7 @@
           }
         ];
       };
-      "nixos-desktop" = nixpkgs.lib.nixosSystem {
+      "PizzaOven" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs;
