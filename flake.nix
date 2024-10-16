@@ -95,6 +95,6 @@
       flake = false;
     };
 
-    nix-flatpak.url = "github:gmodena/nix-flatpak?ref=0.4.1";
+    nix-flatpak.url = "github:gmodena/nix-flatpak?ref=v0.4.1";
   };
 }
