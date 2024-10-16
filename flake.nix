@@ -4,7 +4,7 @@
   outputs = inputs @ {
     self,
     home-manager,
-    flatpaks,
+    nix-flatpak,
     nixpkgs,
     ...
   }: {
