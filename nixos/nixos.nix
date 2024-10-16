@@ -1,6 +1,7 @@
 {
   inputs,
   lib,
+  flatpaks,
   ...
 }: let
   username = "bonje";
