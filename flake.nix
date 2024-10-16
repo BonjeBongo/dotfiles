@@ -4,6 +4,7 @@
   outputs = inputs @ {
     self,
     home-manager,
+    nix-flatpaks,
     nixpkgs,
     ...
   }: {
@@ -95,6 +96,6 @@
       flake = false;
     };
 
-    nix-flatpak.url = "github:gmodena/nix-flatpak?ref=v0.4.1";
+    nix-flatpaks.url = "github:gmodena/nix-flatpak?ref=v0.4.1";
   };
 }
