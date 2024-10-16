@@ -12,17 +12,37 @@
 
     # nixos config
     nixosConfigurations = {
-      "nixos" = nixpkgs.lib.nixosSystem {
+      "nixos-laptop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs;
           asztal = self.packages.x86_64-linux.default;
         };
         modules = [
+          ./nixos/machines/laptop.nix
           ./nixos/nixos.nix
           home-manager.nixosModules.home-manager
           {
-            networking.hostName = "nixos";
+            networking.hostName = "PizzaBox";
+            home-manager.extraSpecialArgs.flake-inputs = inputs;
+            home-manager.users."bonje".imports = [
+              flatpaks.homeManagerModules.nix-flatpak
+            ];
+          }
+        ];
+      };
+      "nixos-desktop" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs;
+          asztal = self.packages.x86_64-linux.default;
+        };
+        modules = [
+          ./nixos/machines/desktop.nix
+          ./nixos/nixos.nix
+          home-manager.nixosModules.home-manager
+          {
+            networking.hostName = "PizzaOven";
             home-manager.extraSpecialArgs.flake-inputs = inputs;
             home-manager.users."bonje".imports = [
               flatpaks.homeManagerModules.nix-flatpak

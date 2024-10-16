@@ -5,11 +5,7 @@
   modulesPath,
   ...
 }: {
-  options.desktop = {
-    enable = lib.mkEnableOption "Desktop";
-  };
-
-  config = lib.mkIf config.desktop.enable {
+  config = {
     imports = [
       (modulesPath + "/installer/scan/not-detected.nix")
     ];

@@ -17,8 +17,6 @@ in {
   ];
 
   hyprland.enable = true;
-  laptop.enable = true;
-  desktop.enable = false;
 
   users.users.${username} = {
     isNormalUser = true;

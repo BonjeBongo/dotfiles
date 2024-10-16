@@ -5,11 +5,7 @@
   modulesPath,
   ...
 }: {
-  options.laptop = {
-    enable = lib.mkEnableOption "Laptop";
-  };
-
-  config = lib.mkIf config.laptop.enable {
+  config = {
     imports = [
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
