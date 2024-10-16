@@ -6,6 +6,6 @@
       mhutchie.git-graph
       eamodio.gitlens
       ms-vscode.hexeditor
-    ]
-  }
+    ];
+  };
 }
