@@ -6,11 +6,11 @@
   console.useXkbConfig = true;
   services.xserver = {
     xkb.layout = "us,ua,jp";
-    xkbOptions = "grp:ctrl_space_toggle";
+    xkb.options = "grp:ctrl_space_toggle";
   };
 
   i18n.inputMethod = {
-    enabled = "fcitx5";
+    type = "fcitx5";
     enable = true;
     fcitx5.addons = with pkgs; [
       fcitx5-anthy
