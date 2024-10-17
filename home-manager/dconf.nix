@@ -68,7 +68,7 @@ with lib.hm.gvariant; {
       focus-mode = "sloppy";
     };
 
-    "/org/gnome/login-screen" = {
+    "org/gnome/login-screen" = {
       disable-user-list = true;
     };
 
