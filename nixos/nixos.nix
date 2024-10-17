@@ -10,8 +10,6 @@ in {
     ./audio.nix
     ./locale.nix
     ./nautilus.nix
-    ./machines/laptop.nix
-    ./machines/desktop.nix
     ./hyprland.nix
     ./gnome.nix
   ];
