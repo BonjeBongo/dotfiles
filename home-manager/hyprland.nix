@@ -61,7 +61,7 @@ in {
       };
 
       input = {
-        kb_layout = "hu,us";
+        kb_layout = "us";
         follow_mouse = 1;
         touchpad = {
           natural_scroll = "yes";
@@ -130,7 +130,8 @@ in {
           "SHIFT,Print,    exec, ${screenshot} --full"
           "SUPER, Return, exec, xterm" # xterm is a symlink, not actually xterm
           "SUPER, F, exec, firefox"
-          "SUPER, T, exec, wezterm -e lf"
+          "SUPER, E, exec, wezterm -e lf"
+          "SUPER, T, exec, wezterm"
           "Ctrl+Shift, Escape, exec, flatpak run io.missioncenter.MissionCenter"
 
           # youtube
