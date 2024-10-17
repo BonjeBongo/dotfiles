@@ -68,6 +68,10 @@ with lib.hm.gvariant; {
       focus-mode = "sloppy";
     };
 
+    "/org/gnome/login-screen" = {
+      disable-user-list = true;
+    };
+
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
       edge-tiling = true;
@@ -123,7 +127,7 @@ with lib.hm.gvariant; {
     };
 
     "system/locale" = {
-      region = "hu_HU.UTF-8";
+      region = "en_US.UTF-8";
     };
 
     "org/virt-manager/virt-manager/connections" = {
