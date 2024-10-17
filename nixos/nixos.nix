@@ -57,7 +57,6 @@ in {
         ../home-manager/theme.nix
         ../home-manager/tmux.nix
         ../home-manager/vscodium.nix
-        ../home-manager/steam.nix
         ../home-manager/flatpaks.nix
         ../home-manager/wezterm.nix
         ./home.nix
