@@ -7,11 +7,11 @@
   aliases = {
     "db" = "distrobox";
     "tree" = "eza --tree";
+    "opwd" = "yazi";
     "nv" = "nvim";
+    "vim" = "nvim";
 
     "ll" = "ls";
-    "éé" = "ls";
-    "és" = "ls";
     "l" = "ls";
 
     ":q" = "exit";
